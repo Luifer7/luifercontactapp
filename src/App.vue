@@ -74,9 +74,7 @@ export default {
   },
   data() {
     return {
-      clientes: [{id: 0, nombre: "Luis Cordero", telefono: 3046295775, completed: false,
-                  email: "@gmail", apellido: "cordero", tipo: "Hombre", origen:"Monteria-Cordoba"},
-      ], 
+      clientes: [], 
       copyClientes: []
     }
   },
@@ -84,8 +82,17 @@ export default {
 
     
     let theCopyClientes = JSON.parse(localStorage.getItem('clientes-vue'));
-    this.clientes = theCopyClientes
-    this.copyClientes = [...this.clientes]
+    console.log(theCopyClientes)
+
+    if (theCopyClientes === null) {
+      this.clientes = []
+      this.copyClientes = []
+      
+    } else {
+      this.clientes = theCopyClientes
+      this.copyClientes = [...this.clientes]
+    }
+    
 
 
   }
