@@ -81,17 +81,13 @@ export default {
     }
   },
   created () {
-    
-   
+
     
     let theCopyClientes = JSON.parse(localStorage.getItem('clientes-vue'));
     this.clientes = theCopyClientes
-
     this.copyClientes = [...this.clientes]
 
-   localStorage.setItem('clientes-vue', JSON.stringify(this.clientes));
-    
-   
+
   }
 }
 </script>
