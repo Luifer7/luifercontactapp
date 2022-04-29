@@ -46,7 +46,7 @@ export default {
   },
   methods: {
       addCliente(e){
-         
+        
           e.preventDefault();
     
           const newCliente = {
