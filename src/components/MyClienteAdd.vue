@@ -71,6 +71,7 @@ export default {
           this.genero = '';
           this.origen = '';
           this.address = '';
+          
           this.$emit('add-cliente', newCliente)
           console.log(this.id)
       }

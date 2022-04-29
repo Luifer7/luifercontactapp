@@ -1,5 +1,6 @@
 
 <template>
+
   <div id="app">
     
     <div id="header">
@@ -26,6 +27,7 @@
  
       
   </div>
+
 </template>
 
 <script>
@@ -79,14 +81,13 @@ export default {
     }
   },
   created () {
-
     
-    let theCopyClientes = JSON.parse(localStorage.getItem('clientes-vue'));
-    console.log(theCopyClientes)
-
+   let theCopyClientes = JSON.parse(localStorage.getItem('clientes-vue'));
+   
     if (theCopyClientes === null) {
       this.clientes = []
       this.copyClientes = []
+      
       
     } else {
       this.clientes = theCopyClientes
