@@ -49,15 +49,15 @@ export default {
         
     },
     addCliente(cliente) {
-     
+    
       this.clientes.push(cliente);
       this.copyClientes = [...this.clientes]
-       localStorage.setItem('clientes-vue', JSON.stringify(this.copyClientes));
+       localStorage.setItem('clientes-vue', JSON.stringify(this.copyClientes));        
     },
     hide() {
      let docu = document.getElementById('hide')
         docu.classList.toggle('hide')
-      console.log(docu);
+      
     },
   
 
@@ -87,7 +87,7 @@ export default {
      let theCopyClientes = JSON.parse(localStorage.getItem('clientes-vue'));
     this.clientes = theCopyClientes
 
-    this.copyClientes = [... this.clientes]
+    this.copyClientes = [...this.clientes]
 
     
    
